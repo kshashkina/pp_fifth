@@ -14,3 +14,19 @@ def caesar_encrypt(text, key):
 
 def caesar_decrypt(text, key):
     return caesar_encrypt(text, -key)
+
+
+def main():
+    text = input("Enter the text: ")
+    key = int(input("Enter the key value: "))
+
+    encrypted_text = caesar_encrypt(text, key)
+    decrypted_text = caesar_decrypt(encrypted_text, key)
+
+    print("Original text:", text)
+    print("Encrypted text:", encrypted_text)
+    print("Decrypted text:", decrypted_text)
+
+
+if __name__ == "__main__":
+    main()
